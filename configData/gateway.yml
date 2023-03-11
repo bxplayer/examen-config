@@ -13,7 +13,6 @@ spring:
           uri: lb://catalog-service
           predicates:
             - Path=/catalog/**
-
 info:
   app:
     name: ${spring.application.name}
