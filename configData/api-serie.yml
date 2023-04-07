@@ -1,14 +1,24 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
-  
+
 spring:
+  application:
+    name: api-serie
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+
+  zipkin:
+    baseUrl: http://localhost:9411/
 
   mongodb:
     embedded:
-      version: 3.6.0
+      version: 4.0.2
   data:
     mongodb:
-      database: test
+      database: series-dev
       port: 27017
 
 info:
